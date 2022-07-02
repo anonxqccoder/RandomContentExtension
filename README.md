@@ -27,4 +27,4 @@ If there's something you would like to change about it, you can dm me for that a
 
 It may look like a lot, but its actually quite simple. Here is a video of the extension being installed and used:
 
-URL HERE
+https://www.youtube.com/watch?v=-agLnUCdwi4
