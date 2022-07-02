@@ -1,0 +1,15 @@
+{
+    "name": "Random Content Button",
+    "version": "1.0.0",
+    "description": "Opens a random link from a list",
+    "manifest_version": 3,
+    "author": "anonxqccoder",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Random Content Button"
+    },
+    "permissions": [
+        "storage",
+        "unlimitedStorage"
+    ]
+}
