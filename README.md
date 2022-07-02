@@ -6,7 +6,7 @@ If there's something you would like to change about it, you can dm me for that a
 
 **How to use:**
 * **Installation:**
-    1. Download latest release zip file: https://github.com/anonxqccoder/randomcontentbutton/releases
+    1. Download latest release zip file: https://github.com/anonxqccoder/RandomContentExtension/releases
     2. Extract the zip somewhere
     2. Go to the extensions page of your Chrome Browser or type chrome://extensions/ in your url bar and hit enter
     3. Enable developer mode
