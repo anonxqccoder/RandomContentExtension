@@ -22,6 +22,7 @@ If there's something you would like to change about it, you can dm me for that a
 
     * For optimal usage, it is best to pin the extension
     * Click the extension logo
+        * ***NEW: THERE IS NOW A "RANDOM CONTENT" BUTTON WHEN YOU RIGHT CLICK ANYWHERE ON A WEBPAGE FOR QUICKER USE*** credits to u/PVC_Fan for the idea
         * **The "CONTENT" button will open a random link from your submitted links**
         * **The upload links button that says "Choose File" will let you submit links**
             * Make a text file, the name doesn't matter
