@@ -4,7 +4,12 @@
     "description": "Opens a random link from a list, created for use on xQc's stream.",
     "manifest_version": 3,
     "author": "funbox1111",
-    "action":{
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
         "default_popup": "index.html",
         "default_title": "Random Content Button"
     },
