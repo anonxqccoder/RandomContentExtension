@@ -76,8 +76,7 @@ async function removeLink(url) {
     reloadLinks();
 }
 
-const contentButton = document.getElementById("contentButton");
-contentButton.addEventListener("click", async () => {
+async function openContent() {
     const links = (await asyncGet()).filter((linkData) => linkData.enabled);
     if (links.length === 0) {
         return alert("No enabled links in database!");
@@ -87,7 +86,10 @@ contentButton.addEventListener("click", async () => {
         url: links[Math.floor(Math.random() * links.length)].url,
         selected: true,
     });
-});
+}
+
+const contentButton = document.getElementById("contentButton");
+contentButton.addEventListener("click", openContent);
 
 const nukeConfirm = { confirmed: false, time: Date.now() };
 document.getElementById("nuke").addEventListener("click", async () => {

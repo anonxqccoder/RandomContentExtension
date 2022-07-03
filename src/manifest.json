@@ -13,8 +13,12 @@
         "default_popup": "index.html",
         "default_title": "Random Content Button"
     },
+    "background": {
+        "service_worker": "background.js"
+    },
     "permissions": [
         "storage",
-        "unlimitedStorage"
+        "unlimitedStorage",
+        "contextMenus"
     ]
 }
