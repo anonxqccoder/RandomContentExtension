@@ -4,14 +4,22 @@ To xQc, if you actually want to pay me for it, which would be dope but not requi
 
 If there's something you would like to change about it, you can dm me for that as well :), or have one of the Juicer's make a github issue (someone in chat will know)
 
+**The chrome extension store page is under review, for now, you must install as instructed below**
+
 **How to use:**
 * **Installation:**
     1. Download latest release zip file: https://github.com/anonxqccoder/RandomContentExtension/releases
     2. Extract the zip somewhere
-    2. Go to the extensions page of your Chrome Browser or type chrome://extensions/ in your url bar and hit enter
-    3. Enable developer mode
-    4. Click load unpacked, browse to the extracted folder, then click select Folder
+
+        **(Video Instructions for the rest of the steps): https://www.youtube.com/watch?v=j6HTui6Qa-k**
+
+    3. Go to the extensions page of your Chrome Browser or type chrome://extensions/ in your url bar and hit enter
+    4. Enable developer mode
+    5. Click load unpacked, browse to the extracted folder, then click select Folder
 * **Use Extension:**
+
+    **Video demo: https://www.youtube.com/watch?v=-agLnUCdwi4**
+
     * For optimal usage, it is best to pin the extension
     * Click the extension logo
         * **The "CONTENT" button will open a random link from your submitted links**
@@ -24,7 +32,3 @@ If there's something you would like to change about it, you can dm me for that a
             * There is the link itself
             * A checkbox to the right of the link, if you wish to disable the link without removing it
             * A remove button, if you wish to remove the link
-
-It may look like a lot, but its actually quite simple. Here is a video of the extension being installed and used:
-
-https://www.youtube.com/watch?v=-agLnUCdwi4
