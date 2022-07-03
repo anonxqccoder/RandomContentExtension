@@ -1,6 +1,6 @@
 {
     "name": "Random Content Button",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Opens a random link from a list, created for use on xQc's stream.",
     "manifest_version": 3,
     "author": "funbox1111",
