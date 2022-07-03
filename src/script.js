@@ -1,6 +1,6 @@
-const asyncSet = (links) => new Promise(resolve => chrome.storage.local.set({ links: links }, resolve));
+const asyncSet = (links) => new Promise((resolve) => chrome.storage.local.set({ links: links }, resolve));
 
-const asyncGet = () => new Promise(resolve => chrome.storage.local.get({ links: [] }, result => resolve(result.links)));
+const asyncGet = () => new Promise((resolve) => chrome.storage.local.get({ links: [] }, (result) => resolve(result.links)));
 
 const linksButton = document.getElementById("uploadLinksButton");
 linksButton.addEventListener("change", (e) => {
@@ -10,14 +10,17 @@ linksButton.addEventListener("change", (e) => {
 
     read.onloadend = async function () {
         const currentLinks = await asyncGet();
-        const newLinks = read.result.split("\n").map(link => link.trim()).filter(link => !currentLinks.find(linkData => linkData.url === link));
-        const validLinks = currentLinks.concat(newLinks.map(link => ({ url: link, enabled: true })));
-        
+        const newLinks = read.result
+            .split("\n")
+            .map((link) => link.trim())
+            .filter((link) => !currentLinks.find((linkData) => linkData.url === link));
+        const validLinks = currentLinks.concat(newLinks.map((link) => ({ url: link, enabled: true })));
+
         await asyncSet(validLinks);
         reloadLinks();
 
         e.target.value = null;
-    }
+    };
 });
 
 async function reloadLinks() {
@@ -32,13 +35,13 @@ async function reloadLinks() {
         linkHref.innerText = linkData.url;
         linkParagraphElement.appendChild(linkHref);
 
-        const checkbox = document.createElement('input');
+        const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = linkData.enabled;
         checkbox.onchange = () => checkboxChange(!linkData.enabled, linkData.url);
         linkParagraphElement.appendChild(checkbox);
- 
-        const removeButton = document.createElement('button');
+
+        const removeButton = document.createElement("button");
         removeButton.innerText = "Remove";
         removeButton.onclick = () => removeLink(linkData.url);
         linkParagraphElement.appendChild(removeButton);
@@ -75,7 +78,7 @@ async function removeLink(url) {
 
 const contentButton = document.getElementById("contentButton");
 contentButton.addEventListener("click", async () => {
-    const links = (await asyncGet()).filter(linkData => linkData.enabled);
+    const links = (await asyncGet()).filter((linkData) => linkData.enabled);
     if (links.length === 0) {
         return alert("No enabled links in database!");
     }
@@ -86,9 +89,9 @@ contentButton.addEventListener("click", async () => {
     });
 });
 
-const nukeConfirm = {confirmed: false, time: Date.now()};
+const nukeConfirm = { confirmed: false, time: Date.now() };
 document.getElementById("nuke").addEventListener("click", async () => {
-    if (Date.now()-nukeConfirm.time > 20000) {
+    if (Date.now() - nukeConfirm.time > 20000) {
         nukeConfirm.confirmed = false;
     }
 
@@ -103,6 +106,6 @@ document.getElementById("nuke").addEventListener("click", async () => {
         await asyncSet([]);
         reloadLinks();
     }
-})
+});
 
 reloadLinks();
